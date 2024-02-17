@@ -39,6 +39,7 @@ dependencies:
   webview_flutter: ^4.7.0
   flutter_svg: ^2.0.9
   flutter_riverpod: ^2.4.10
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,7 @@ flutter:
     - assets/images/icons/page_manager/person_filled_icon.svg
     - assets/images/icons/page_manager/person_outlined_icon.svg
     - assets/images/icons/page_manager/search_outlined_icon.svg
+    - assets/images/icons/page_manager/signup_filled_icon.svg
     - assets/images/icons/page_manager/star_filled_icon.svg
 
   # To add assets to your application, add an assets section, like this:
