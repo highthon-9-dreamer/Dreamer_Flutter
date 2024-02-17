@@ -1,3 +1,4 @@
+import 'package:dreamer_flutter/config/dreamer_color.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -5,6 +6,8 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: DreamerColor.white,
+    );
   }
 }
