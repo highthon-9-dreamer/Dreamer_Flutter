@@ -89,5 +89,26 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+    - family: Suit
+      fonts:
+        - asset: assets/fonts/suit/SUIT-Thin.oft
+          weight: 100
+        - asset: assets/fonts/suit/SUIT-ExtraLight.oft
+          weight: 200
+        - asset: assets/fonts/suit/SUIT-Light.oft
+          weight: 300
+        - asset: assets/fonts/suit/SUIT-Regular.oft
+          weight: 400
+        - asset: assets/fonts/suit/SUIT-Medium.oft
+          weight: 500
+        - asset: assets/fonts/suit/SUIT-SemiBold.oft
+          weight: 600
+        - asset: assets/fonts/suit/SUIT-Bold.oft
+          weight: 700
+        - asset: assets/fonts/suit/SUIT-ExtraBold.oft
+          weight: 800
+        - asset: assets/fonts/suit/SUIT-Heavy.oft
+          weight: 900
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
