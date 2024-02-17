@@ -32,11 +32,11 @@ class _PageManagerScreenState extends ConsumerState<PageManagerScreen> {
     final pageManagerState = ref.watch(pageControllerProvider);
     final pageManagerNotifier = ref.read(pageControllerProvider.notifier);
     final List<Widget> screenData = [
-      SeriesMainScreen(),
-      SearchScreen(),
-      MainPage(),
-      LibraryScreen(),
-      InfoScreen(),
+      const SeriesMainScreen(),
+      const SearchScreen(),
+      const MainScreen(),
+      const LibraryScreen(),
+      const InfoScreen(),
     ];
 
     return Scaffold(
