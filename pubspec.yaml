@@ -62,6 +62,16 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/images/icons/page_manager/book_filled_icon.svg
+    - assets/images/icons/page_manager/book_outlined_icon.svg
+    - assets/images/icons/page_manager/library_filled_icon.svg
+    - assets/images/icons/page_manager/library_outlined_icon.svg
+    - assets/images/icons/page_manager/person_filled_icon.svg
+    - assets/images/icons/page_manager/person_outlined_icon.svg
+    - assets/images/icons/page_manager/search_outlined_icon.svg
+    - assets/images/icons/page_manager/star_filled_icon.svg
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -93,23 +103,23 @@ flutter:
   fonts:
     - family: Suit
       fonts:
-        - asset: assets/fonts/suit/SUIT-Thin.oft
+        - asset: assets/fonts/suit/Thin.otf
           weight: 100
-        - asset: assets/fonts/suit/SUIT-ExtraLight.oft
+        - asset: assets/fonts/suit/ExtraLight.otf
           weight: 200
-        - asset: assets/fonts/suit/SUIT-Light.oft
+        - asset: assets/fonts/suit/Light.otf
           weight: 300
-        - asset: assets/fonts/suit/SUIT-Regular.oft
+        - asset: assets/fonts/suit/Regular.otf
           weight: 400
-        - asset: assets/fonts/suit/SUIT-Medium.oft
+        - asset: assets/fonts/suit/Medium.otf
           weight: 500
-        - asset: assets/fonts/suit/SUIT-SemiBold.oft
+        - asset: assets/fonts/suit/SemiBold.otf
           weight: 600
-        - asset: assets/fonts/suit/SUIT-Bold.oft
+        - asset: assets/fonts/suit/Bold.otf
           weight: 700
-        - asset: assets/fonts/suit/SUIT-ExtraBold.oft
+        - asset: assets/fonts/suit/ExtraBold.otf
           weight: 800
-        - asset: assets/fonts/suit/SUIT-Heavy.oft
+        - asset: assets/fonts/suit/Heavy.otf
           weight: 900
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
