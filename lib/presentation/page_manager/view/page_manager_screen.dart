@@ -1,6 +1,7 @@
 import 'package:dreamer_flutter/config/dreamer_color.dart';
 import 'package:dreamer_flutter/presentation/page_manager/provider/page_manager_provider.dart';
 import 'package:dreamer_flutter/presentation/page_manager/widget/page_manager_navigator_item_widget.dart';
+import 'package:dreamer_flutter/presentation/series/view/series_main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,7 +28,7 @@ class _PageManagerScreenState extends ConsumerState<PageManagerScreen> {
     final pageManagerState = ref.watch(pageControllerProvider);
     final pageManagerNotifier = ref.read(pageControllerProvider.notifier);
     final List<Widget> screenData = [
-      Container(color: Colors.red),
+      SeriesMainScreen(),
       Container(color: Colors.orange),
       Container(color: Colors.yellow),
       Container(color: Colors.green),
@@ -124,31 +125,32 @@ class _PageManagerScreenState extends ConsumerState<PageManagerScreen> {
           pageManagerNotifier.setPage(2);
         },
         child: Container(
-            width: 64,
-            height: 64,
-            decoration: BoxDecoration(
-              color: pageManagerState.index == 2
-                  ? DreamerColor.keyDeepPurple
-                  : DreamerColor.keyPurple,
-              shape: BoxShape.circle,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  '$path/star_filled_icon.svg',
+          width: 64,
+          height: 64,
+          decoration: BoxDecoration(
+            color: pageManagerState.index == 2
+                ? DreamerColor.keyDeepPurple
+                : DreamerColor.keyPurple,
+            shape: BoxShape.circle,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                '$path/star_filled_icon.svg',
+              ),
+              Text(
+                '꿈방',
+                style: TextStyle(
+                  color: DreamerColor.white,
+                  fontFamily: suit,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 12,
                 ),
-                Text(
-                  '꿈방',
-                  style: TextStyle(
-                    color: DreamerColor.white,
-                    fontFamily: suit,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 12,
-                  ),
-                )
-              ],
-            )),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

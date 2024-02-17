@@ -20,7 +20,6 @@ class PageManagerNavigatorItemWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageManagerState = ref.watch(pageControllerProvider);
-    final pageManagerNotifier = ref.read(pageControllerProvider.notifier);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

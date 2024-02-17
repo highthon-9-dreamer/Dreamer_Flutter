@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 const suit = 'Suit';
 
 class DreamerColor {
+  static Color background = const Color(0xFFF2F3F5);
+
   static Color white = const Color(0xFFFFFFFF);
   static Color black = const Color(0xFF000000);
 
