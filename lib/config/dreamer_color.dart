@@ -7,6 +7,7 @@ class DreamerColor {
   static Color black = const Color(0xFF000000);
 
   static Color keyPurple = const Color(0xFF9896F1);
+  static Color keyDeepPurple = const Color(0xFF7572DF);
 
   static Color g1 = const Color(0xFF4B4E62);
   static Color g2 = const Color(0xFFA6ABC0);
