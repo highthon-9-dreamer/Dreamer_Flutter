@@ -1,6 +1,10 @@
 import 'package:dreamer_flutter/config/dreamer_color.dart';
+import 'package:dreamer_flutter/presentation/Info/view/info_screen.dart';
+import 'package:dreamer_flutter/presentation/library/view/library_screen.dart';
+import 'package:dreamer_flutter/presentation/main/view/main_screen.dart';
 import 'package:dreamer_flutter/presentation/page_manager/provider/page_manager_provider.dart';
 import 'package:dreamer_flutter/presentation/page_manager/widget/page_manager_navigator_item_widget.dart';
+import 'package:dreamer_flutter/presentation/search/view/search_screen.dart';
 import 'package:dreamer_flutter/presentation/series/view/series_main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -29,10 +33,10 @@ class _PageManagerScreenState extends ConsumerState<PageManagerScreen> {
     final pageManagerNotifier = ref.read(pageControllerProvider.notifier);
     final List<Widget> screenData = [
       SeriesMainScreen(),
-      Container(color: Colors.orange),
-      Container(color: Colors.yellow),
-      Container(color: Colors.green),
-      Container(color: Colors.blue),
+      SearchScreen(),
+      MainPage(),
+      LibraryScreen(),
+      InfoScreen(),
     ];
 
     return Scaffold(
