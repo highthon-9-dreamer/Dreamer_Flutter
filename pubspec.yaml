@@ -38,6 +38,7 @@ dependencies:
   dio: ^5.4.0
   riverpod: ^2.5.0
   webview_flutter: ^4.7.0
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
