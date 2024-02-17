@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DreamerColor {
+  static Color white = const Color(0xFFFFFFFF);
+  static Color black = const Color(0xFF000000);
+
   static Color keyPurple = const Color(0xFF9896F1);
 
   static Color g1 = const Color(0xFF4B4E62);
