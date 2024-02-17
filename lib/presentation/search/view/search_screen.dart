@@ -1,4 +1,5 @@
 import 'package:dreamer_flutter/config/dreamer_color.dart';
+import 'package:dreamer_flutter/presentation/widget/series_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -9,15 +10,18 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: DreamerColor.g4,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 71),
+      body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 61,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(
                   Icons.arrow_back_ios_new_rounded,
-                  size: 20,
+                  size: 30,
                 ),
                 const SizedBox(
                   width: 10,
@@ -45,8 +49,84 @@ class SearchScreen extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Result(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
+            const SeriesItemWidget(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class Result extends StatelessWidget {
+  const Result({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: DreamerColor.white,
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 15,
+          ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "연재 중",
+                style: TextStyle(
+                  fontFamily: suit,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(
+                width: 78,
+              ),
+              Text(
+                "꿈방",
+                style: TextStyle(
+                  fontFamily: suit,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(
+                width: 80,
+              ),
+              Text(
+                "작성자",
+                style: TextStyle(
+                  fontFamily: suit,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+            width: 390,
+            height: 1,
+            decoration: BoxDecoration(
+              color: DreamerColor.g3,
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -25,14 +25,13 @@ class SeriesItemWidget extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 15),
                     child: Column(
                       children: [
                         for (int i = 0; i < 2; i++)
                           Padding(
-                            padding: EdgeInsets.only(
-                                bottom: i == 2 - 1 ? 0 : 3),
+                            padding:
+                                EdgeInsets.only(bottom: i == 2 - 1 ? 0 : 3),
                             child: Stack(
                               children: [
                                 SvgPicture.asset(
@@ -48,8 +47,7 @@ class SeriesItemWidget extends StatelessWidget {
                                     style: TextStyle(
                                       color: DreamerColor.white,
                                       fontSize: 12,
-                                      fontWeight:
-                                      FontWeight.w600,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: suit,
                                     ),
                                   ),
@@ -62,13 +60,10 @@ class SeriesItemWidget extends StatelessWidget {
                   ),
                   const SizedBox(width: 6),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 17),
+                    padding: const EdgeInsets.symmetric(vertical: 17),
                     child: Column(
-                      mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           '오늘은 큰일났다.',
@@ -166,7 +161,7 @@ class SeriesItemWidget extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 5),
+        const SizedBox(height: 1.5),
       ],
     );
   }
