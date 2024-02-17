@@ -1,8 +1,15 @@
+import 'package:dreamer_flutter/presentation/auth/view/sign_in_screen.dart';
 import 'package:dreamer_flutter/presentation/auth/view/sign_up_screen.dart';
+import 'package:dreamer_flutter/presentation/page_manager/view/page_manager_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Suit',
       ),
-      home: const SignUpScreen(),
+      home: const SignInScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

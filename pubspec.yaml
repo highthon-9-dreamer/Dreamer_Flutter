@@ -80,6 +80,8 @@ flutter:
     - assets/images/icons/info/info_logout_icon.svg
     - assets/images/icons/info/info_mysign_icon.svg
     - assets/images/icons/info/info_write_icon.svg
+    - assets/images/icons/core/on_boarding.png
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
