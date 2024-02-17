@@ -1,25 +1,33 @@
 import 'dart:io';
 
 import 'package:dreamer_flutter/config/dreamer_color.dart';
+import 'package:dreamer_flutter/presentation/auth/provider/sign_up_provider.dart';
+import 'package:dreamer_flutter/presentation/auth/view/sign_in_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:image_picker/image_picker.dart';
 
-class SignUpScreen extends StatefulWidget {
+class SignUpScreen extends ConsumerStatefulWidget {
   const SignUpScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  ConsumerState<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignUpScreenState extends ConsumerState<SignUpScreen> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController pwdController = TextEditingController();
   bool imageChoice = false;
   final picker = ImagePicker();
   XFile? image; // 갤러리에서 여러 장의 사진을 선택해서 저장할 변수
   @override
   Widget build(BuildContext context) {
+    final signUpNotifier = ref.read(signUpProvider.notifier);
+    final signUpState = ref.watch(signUpProvider);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: DreamerColor.g4,
@@ -134,8 +142,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               width: 345,
               height: 55,
               color: Colors.white,
-              child: const TextField(
-                decoration: InputDecoration(
+              child: TextField(
+                controller: nameController,
+                decoration: const InputDecoration(
                   hintText: '닉네임을 입력하세요',
                   hintStyle: TextStyle(
                     fontFamily: 'suit',
@@ -172,8 +181,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               width: 345,
               height: 55,
               color: Colors.white,
-              child: const TextField(
-                decoration: InputDecoration(
+              child: TextField(
+                controller: emailController,
+                decoration: const InputDecoration(
                   hintText: '이메일을 입력하세요',
                   hintStyle: TextStyle(
                     fontFamily: 'suit',
@@ -210,8 +220,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               width: 345,
               height: 55,
               color: Colors.white,
-              child: const TextField(
-                decoration: InputDecoration(
+              child: TextField(
+                controller: pwdController,
+                decoration: const InputDecoration(
                   hintText: '비밀번호를 입력하세요',
                   hintStyle: TextStyle(
                     fontFamily: 'suit',
@@ -232,24 +243,43 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 72,
             ),
-            Center(
+            GestureDetector(
+              onTap: () async {
+                await signUpNotifier.signUp(
+                  nameController.text,
+                  emailController.text,
+                  pwdController.text,
+                  image!.path,
+                );
+                if (signUpState == SignUpState.success) {
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const SignInScreen(),
+                    ),
+                    (route) => false,
+                  );
+                }
+              },
+              child: Center(
                 child: Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: DreamerColor.keyPurple,
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(5),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: DreamerColor.keyDeepPurple,
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(5),
+                    ),
+                  ),
+                  width: 340,
+                  height: 50,
+                  child: Text(
+                    "회원가입",
+                    style: TextStyle(
+                      color: DreamerColor.white,
+                    ),
+                  ),
                 ),
               ),
-              width: 340,
-              height: 50,
-              child: Text(
-                "다음",
-                style: TextStyle(
-                  color: DreamerColor.white,
-                ),
-              ),
-            ))
+            ),
           ],
         ),
       ),
