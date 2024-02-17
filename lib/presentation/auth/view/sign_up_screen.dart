@@ -58,19 +58,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Center(
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
                     width: 100,
                     height: 100,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(32.5),
+                    child: ClipOval(
                       child: imageChoice
                           ? Image.file(
                               File(image!.path),
                               fit: BoxFit.cover,
                             )
                           : SvgPicture.asset(
-                              'assets/images/icons/page_manager/signup_filled_icon.svg',
-                            ),
+                              'assets/images/icons/page_manager/signup_filled_icon.svg'),
                     ),
                   ),
                   Positioned(
