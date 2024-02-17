@@ -75,7 +75,6 @@ flutter:
     - assets/images/icons/page_manager/star_filled_icon.svg
     - assets/images/icons/core/banner_icon.svg
     - assets/images/icons/core/books_icon.svg
-
     - assets/images/icons/info/info_comment_icon.svg
     - assets/images/icons/info/info_heart_icon.svg
     - assets/images/icons/info/info_logout_icon.svg
