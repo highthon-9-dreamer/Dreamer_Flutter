@@ -83,6 +83,7 @@ flutter:
     - assets/images/icons/core/on_boarding.png
     - assets/images/icons/main/main_appbar.png
     - assets/images/icons/main/main_library.png
+    - assets/images/icons/main/main_background_image.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

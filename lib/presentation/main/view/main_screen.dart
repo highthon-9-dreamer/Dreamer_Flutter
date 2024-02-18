@@ -12,22 +12,7 @@ class MainScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 56,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35.0),
-              child: Text(
-                '꿈방',
-                style: TextStyle(
-                  color: DreamerColor.white,
-                  fontFamily: suit,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22,
-                ),
-              ),
-            ),
-            Image.asset('assets/images/icons/main/main_library.png'),
+            Image.asset('assets/images/icons/main/main_background_image.png'),
           ],
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:dreamer_flutter/config/dreamer_color.dart';
 import 'package:dreamer_flutter/presentation/series/model/series_list_model.dart';
+import 'package:dreamer_flutter/presentation/series/view/series_detail_screen.dart';
 import 'package:dreamer_flutter/presentation/widget/series_item_widget.dart';
 import 'package:dreamer_flutter/secret.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +77,12 @@ class _SeriesMainScreenState extends ConsumerState<SeriesMainScreen> {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {
-                              
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      SeriesDetailScreen(index: index + 1),
+                                ),
+                              );
                             },
                             child: SeriesItemWidget(
                               title: snapshot.data![index].title.toString(),
