@@ -34,13 +34,6 @@ class LibraryScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                child: const SeriesItemWidget()),
           ],
         ),
       ),

@@ -39,9 +39,9 @@ class SignInNotifier extends StateNotifier<SignInState> {
       );
       if (resp.statusCode == 200) {
         state = SignInState.success;
-        print(resp.data['accessToken']);
         accessToken = resp.data['accessToken'];
       }
+      print(resp.statusCode);
     } catch (e) {
       state = SignInState.failure;
       throw Exception(e.toString());

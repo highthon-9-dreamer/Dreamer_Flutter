@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dreamer_flutter/config/dreamer_color.dart';
+import 'package:dreamer_flutter/presentation/series/view/series_post_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -114,7 +115,14 @@ class _InfoScreenState extends State<InfoScreen> {
                   child: Column(
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        behavior: HitTestBehavior.translucent,
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const SeriesPostScreen(),
+                            ),
+                          );
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

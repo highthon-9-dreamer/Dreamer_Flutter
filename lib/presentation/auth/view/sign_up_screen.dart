@@ -31,14 +31,14 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: DreamerColor.g4,
+      appBar: AppBar(
+        backgroundColor: DreamerColor.g4,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
             Text(
               '환영합니다!',
               style: TextStyle(
